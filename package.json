@@ -1,0 +1,22 @@
+{
+  "name": "food-database",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://TimmyHanke.github.io/Foods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "Timmy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
+    "git": "^0.1.5",
+    "github": "^14.0.0",
+    "joi": "^17.6.0",
+    "mongoose": "^6.6.0"
+  }
+}
