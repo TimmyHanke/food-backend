@@ -1,10 +1,12 @@
 const joi = require("joi");
 const express = require("express");
 const router = express.Router();
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const { Foods, validate } = require("../models/Foods");
 const { Categories } = require("../models/Categories");
 
-router.get("/", async (req, res) => {
+router.get("/", [auth, admin], async (req, res, next) => {
   const foods = await Foods.find();
   return res.send(foods);
 });
